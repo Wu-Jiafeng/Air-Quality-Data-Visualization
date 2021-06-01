@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2017年中国空气质量情况</title>
+     <link href="css/bootstrap.min.css" rel="stylesheet">
+	 <link rel="stylesheet" href="css/sandiantu.css">
+      <style>
+  .tooltip{
+    position: absolute;
+    width: 120;
+    height: auto;
+    font-family: simsun;
+    font-size: 14px;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<h3 class="text-center">
+				2017年中国空气质量情况
+			</h3>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-12 column" id="scatterplot">
+		<div id='graph'></div>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+		<h4 class="text-center">
+				--------------------------------------------------------------
+			</h4>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-8 column">
+			<h4 class="text-center">
+				2017年中国空气质量情况（按天统计）
+			</h4>
+			<ul class="nav nav-tabs">
+				<li class="active">
+					 <a href="javascript:void(0);" onclick="heatmapChart('./data/daydata.json',0)">北京</a>
+				</li>
+				<li>
+					 <a href="javascript:void(0);" onclick="heatmapChart('./data/daydata.json',1)">成都</a>
+				</li>
+				<li>
+					 <a href="javascript:void(0);" onclick="heatmapChart('./data/daydata.json',2)">广州</a>
+				</li>
+				<li>
+					 <a href="javascript:void(0);" onclick="heatmapChart('./data/daydata.json',3)">武汉</a>
+				</li>
+			</ul>
+			<div id="chart"></div>
+		</div>
+		<div class="col-md-4 column">
+			<h4 class="text-center">
+				2017年中国空气质量情况（按小时统计）
+			</h4>
+			<div id="chart1"></div>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<h5 class="text-center">
+				Mason Wu-2019/12/10
+			</h5>
+		</div>
+	</div>
+</div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src='js/simple-statistics.min.js' />
+  <script src='js/data_scatterplot.js'></script>
+  <script src='js/d3_.js'></script>
+  <script src='js/scatterplot.js'></script>
+  <script src="js/d3.v3.min.js"></script>
+  <script src='js/heatmap.js'></script>
+</body> 
+</html>
